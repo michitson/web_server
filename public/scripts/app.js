@@ -10,7 +10,7 @@ weatherForm.addEventListener('submit', (e) => {
 
     const location = search.value
     messageOne.textContent = 'Loading ......'
-    fetch(`http://localhost:3000/weather?address=${location}`).then((response) => {
+    fetch(`http://webserver-env-1.eba-fxbd3ap2.eu-west-2.elasticbeanstalk.com/weather?address=${location}`).then((response) => {
         response.json().then((data)=> {
             if(data.error) {
                 messageOne.textContent = data.error
